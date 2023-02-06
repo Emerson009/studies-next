@@ -2,8 +2,8 @@ import Footer from '../../components/patterns/Footer'
 import { theme } from '../../theme/theme';
 import { Image, Box, Text, Icon, Input, Button } from '../../theme/components';
 import Link from 'next/link'
-const LOGO_ALURA_URL = 'http://placehold.it/94x44';
-const SIDE_IMAGE_URL = 'http://placehold.it/2878x1640'
+const LOGO_ALURA_URL = 'assets/images/alura-logo.svg';
+const SIDE_IMAGE_URL = 'assets/images/alura-cases.png'
 
 function SideImage() {
   return (
