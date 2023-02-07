@@ -1,8 +1,6 @@
-import Link from 'next/link'
-import Head from 'next/head';
-//SSG - Static Site Generation
-//SSR - Server Side Rendering 
-//ISG - Incremental Static Generation
+import FAQScreen from '../src/screens/FAQScreen';
+
+export default FAQScreen;
 
 export async function getStaticProps() {
     console.log("Rodando o build");
@@ -17,33 +15,7 @@ export async function getStaticProps() {
 
     return {
       props: {
-        faq
+        faq,
       }, 
     };
   }
-
-export default function FAQPage({faq}){
-    console.log(faq);
-
-    return(
-        <div>
-        <Head>
-            <title>FAQ - Alura Cases Campanha</title>
-        </Head>
-        <h1>Teste - Páginas de Perguntas FAQ</h1>
-        <Link href="/" passHref>
-            Ir para a home
-        </Link>
-        <ul>
-            {faq.map(({question, answer}) => (
-                <li key={question}>
-                    <article>
-                        <h2>{question}</h2>
-                        <p>{answer}</p>
-                    </article>
-                </li>
-            ))}
-        </ul>
-    </div>
-    )
-}
